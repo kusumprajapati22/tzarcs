@@ -28,6 +28,94 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background: #2C3E50;
+            padding: 10px 20px;
+        }
+        .navmenu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navmenu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        .navmenu ul li {
+            position: relative;
+        }
+        .navmenu ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 12px 20px;
+            display: block;
+        }
+        .navmenu ul li a:hover {
+            background: #1ABC9C;
+            border-radius: 5px;
+        }
+        .dropdown ul {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background: #34495E;
+            min-width: 200px;
+            flex-direction: column;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+        .dropdown:hover ul {
+            display: flex;
+        }
+        .dropdown ul li {
+            width: 100%;
+        }
+        .dropdown ul li a {
+            padding: 10px 15px;
+            white-space: nowrap;
+        }
+        .mobile-nav-toggle {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .navmenu ul {
+                flex-direction: column;
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #2C3E50;
+                padding: 10px 0;
+            }
+            .navmenu ul li {
+                text-align: center;
+            }
+            .navmenu ul li a {
+                display: block;
+                padding: 12px;
+            }
+            .mobile-nav-toggle {
+                display: block;
+            }
+            .navmenu.active ul {
+                display: flex;
+            }
+        }
+    </style>
+
   
 </head>
 
@@ -40,9 +128,13 @@
     </a>
       <div class="container d-flex align-items-center">
 
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="#hero" class="active">Home<br></a></li>
+         <nav>
+        <div class="navmenu" id="navmenu">
+            <a href="#" class="logo" style="color:white; font-size: 24px; text-decoration: none;">Brand</a>
+            <i class="fas fa-bars mobile-nav-toggle"></i>
+            <ul>
+                <li><a href="#">Home</a></li>
+       
             <li class="dropdown"><a href="#"><span>Insights</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                   <li><a href="insights/ai.html">Technology & AI</a></li>
@@ -776,7 +868,7 @@
     </section><!-- /Contact Section -->
 
   </main>
-c
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -794,6 +886,13 @@ c
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  
+    <script>
+        document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
+            document.querySelector('.navmenu').classList.toggle('active');
+        });
+    </script>
 
 </body>
 

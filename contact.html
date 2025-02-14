@@ -33,18 +33,22 @@
 
 <body class="index-page">
 
-  <header id="header" class="header sticky-top">
+    <header id="header" class="header sticky-top">
     <div class="branding d-flex align-items-center ">
       <a href="index.html" class="logo d-flex align-items-center pt-2">
         <img src="assets/img/logo.jpeg" alt="" width="280px" height="70px">
     </a>
       <div class="container d-flex align-items-center">
 
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="index.html">Home<br></a></li>
-            <li class="dropdown"><a href="#"><span>Insights</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
+         <nav>
+        <div class="navmenu" id="navmenu">
+            <i class="fas fa-bars mobile-nav-toggle"></i>
+            <ul>
+                <li><a href="#">Home</a></li>
+       
+             <li class="dropdown">
+                    <a href="#">Insights <i class="fas fa-chevron-down"></i></a>
+                    <ul style="height:200px;">
                   <li><a href="insights/ai.html">Technology & AI</a></li>
                   <li><a href="insights/trending.html">Trending Topics</a></li>
                   <li><a href="insights/budget.html">Budget Insights</a></li>
@@ -57,8 +61,9 @@
               </ul>
             </li>
 
-            <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
+            <li class="dropdown">
+                    <a href="#">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul style="overflow-y:scroll;height:500px;">
                 <li><a href="services/service.html">Consulting Services</a></li>
                 <li><a href="services/corporate.html">Transaction & Corporate Finance</a></li>
                 <li><a href="services/tax.html">Tax Consulting</a></li>
@@ -100,8 +105,9 @@
               </ul>
             </li>
 
-            <li class="dropdown"><a href="#"><span>Industries</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
+            <li class="dropdown">
+                    <a href="#">Industries <i class="fas fa-chevron-down"></i></a>
+                     <ul style="overflow-y:scroll;height:500px;">
                 <li><a href="industries/industries.html">Manufacturing Industries</a></li>
                 <li><a href="industries/financial.html">Financial Services</a></li>
                 <li><a href="industries/health.html">Health Care Consulting</a></li>
@@ -138,8 +144,9 @@
               </ul>
             </li>
 
-            <li class="dropdown"><a href="#"><span>Careers</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
+           <li class="dropdown">
+                    <a href="#">Careers <i class="fas fa-chevron-down"></i></a>
+                     <ul style="height:200px;">
                 <li><a href="careers/life.html">Life at Tzarcs</a></li>
                 <li><a href="careers/join.html">How to Join Us</a></li> 
                 <li><a href="careers/exposures.html">Exposures at Tzarcs</a></li>
@@ -147,8 +154,9 @@
               </ul>
             </li>
 
-            <li class="dropdown"><a href="#"><span>About Us</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
+           <li class="dropdown">
+                    <a href="#">About <i class="fas fa-chevron-down"></i></a>
+                    <ul style="height:200px;">
                 <li><a href="about/events.html">Events</a></li>
                 <li><a href="about/media.html">Media</a></li>
                 <li><a href="about/values.html">Our Values</a></li>
@@ -159,16 +167,16 @@
               </ul>
             </li>
 
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
+          </div>
+    </nav>
+  
        </div>
 
     </div>
 
   </header>
-
   <main class="main">
 
     <!-- Testimonials Section -->

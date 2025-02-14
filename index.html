@@ -953,6 +953,27 @@
         });
     </script>
 
+  <script>
+    // Capture form input values and generate WhatsApp message
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+        
+        // Format the message to be sent to WhatsApp
+        var whatsappMessage = `Name:${name}  Email:${email} Subject:${subject}   Message:${message}`;
+        
+        // Set the value of the hidden text field
+        document.getElementById('whatsappMessage').value = whatsappMessage;
+        
+        // Submit the form to open WhatsApp with pre-filled message
+        this.submit();
+    });
+  </script>
+  
 </body>
 
 </html>

@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Tzarcs</title>
+  <title>TZARCS</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
   
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -18,22 +18,109 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+           
+            padding: 10px 20px;
+        }
+        .navmenu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navmenu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        .navmenu ul li {
+            position: relative;
+        }
+        .navmenu ul li a {
+            text-decoration: none;
+            padding: 12px 20px;
+            display: block;
+        }
+        .navmenu ul li a:hover {
+            background: #1ABC9C;
+            border-radius: 5px;
+        }
+        .dropdown ul {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background: #34495E;
+            min-width: 200px;
+            flex-direction: column;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+        .dropdown:hover ul {
+            display: flex;
+        }
+        .dropdown ul li {
+            width: 100%;
+        }
+        .dropdown ul li a {
+            padding: 10px 15px;
+            white-space: nowrap;
+        }
+        .mobile-nav-toggle {
+            display: none;
+            font-size: 24px;
+            color: black;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .navmenu ul {
+                flex-direction: column;
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #2C3E50;
+                padding: 10px 0;
+            }
+            .navmenu ul li {
+                text-align: center;
+            }
+            .navmenu ul li a {
+                display: block;
+                padding: 12px;
+            }
+            .mobile-nav-toggle {
+                display: block;
+            }
+            .navmenu.active ul {
+                display: flex;
+            }
+        }
+    </style>
 
   
 </head>
 
 <body class="index-page">
 
-    <header id="header" class="header sticky-top">
+  <header id="header" class="header sticky-top">
     <div class="branding d-flex align-items-center ">
       <a href="index.html" class="logo d-flex align-items-center pt-2">
         <img src="assets/img/logo.jpeg" alt="" width="280px" height="70px">
@@ -48,7 +135,7 @@
        
              <li class="dropdown">
                     <a href="#">Insights <i class="fas fa-chevron-down"></i></a>
-                    <ul style="height:200px;">
+                    <ul style="height:180px;">
                   <li><a href="insights/ai.html">Technology & AI</a></li>
                   <li><a href="insights/trending.html">Trending Topics</a></li>
                   <li><a href="insights/budget.html">Budget Insights</a></li>
@@ -146,7 +233,7 @@
 
            <li class="dropdown">
                     <a href="#">Careers <i class="fas fa-chevron-down"></i></a>
-                     <ul style="height:200px;">
+                     <ul style="height:100px;">
                 <li><a href="careers/life.html">Life at Tzarcs</a></li>
                 <li><a href="careers/join.html">How to Join Us</a></li> 
                 <li><a href="careers/exposures.html">Exposures at Tzarcs</a></li>
@@ -156,7 +243,7 @@
 
            <li class="dropdown">
                     <a href="#">About <i class="fas fa-chevron-down"></i></a>
-                    <ul style="height:200px;">
+                    <ul style="height:150px;">
                 <li><a href="about/events.html">Events</a></li>
                 <li><a href="about/media.html">Media</a></li>
                 <li><a href="about/values.html">Our Values</a></li>
@@ -177,8 +264,8 @@
     </div>
 
   </header>
-  <main class="main">
 
+   <main class="main">
       <!-- Faq Section -->
       <section id="faq" class="faq section light-background">
 
